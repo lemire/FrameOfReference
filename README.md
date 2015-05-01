@@ -8,16 +8,19 @@ It should run fast even though it is written in simple C++.
 
 ##  Usage:
 
+To run a simple benchmark, do 
+     
      make
-     ./test somevectorfile
+     ./test sampledata.txt
 
-where somevectorfile is a text data file with one integer per line.
+where sampledata.txt is a text data file with one integer per line.
 
 For a parallelized version, type
 
      make testmp
-     ./testmp somevectorfile
+     ./testmp sampledata.txt
 
+This requires OpenMP support however.
 
 ## Requirements:
 
