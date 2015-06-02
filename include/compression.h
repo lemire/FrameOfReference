@@ -16,11 +16,29 @@ uint32_t * nullpacker( uint32_t,  uint32_t *   , uint32_t *    out) {
   return out;
 }
 
-uint32_t * nullunpacker( uint32_t,  uint32_t *  in , uint32_t * ) {
-  return in;
+uint32_t * nullunpacker8( uint32_t base,  uint32_t *  in , uint32_t * out) {
+    for(int k = 0; k < 8; ++k) {
+		 out[k] = base;
+	}
+	return in;
 }
 
-packfnc unpack8[33]={nullunpacker,unpack1_8,
+uint32_t * nullunpacker16( uint32_t base,  uint32_t *  in , uint32_t * out) {
+    for(int k = 0; k < 8; ++k) {
+		 out[k] = base;
+	}
+	return in;
+}
+
+uint32_t * nullunpacker32( uint32_t base,  uint32_t *  in , uint32_t * out) {
+    for(int k = 0; k < 8; ++k) {
+		 out[k] = base;
+	}
+	return in;
+}
+
+
+packfnc unpack8[33]={nullunpacker8,unpack1_8,
         unpack2_8,
         unpack3_8,
         unpack4_8,
@@ -86,7 +104,7 @@ packfnc pack8[33]={nullpacker,pack1_8,
         pack31_8,
         pack32_8};
 
-packfnc unpack16[33]={nullunpacker,unpack1_16,
+packfnc unpack16[33]={nullunpacker16,unpack1_16,
         unpack2_16,
         unpack3_16,
         unpack4_16,
@@ -152,7 +170,7 @@ packfnc pack16[33]={nullpacker,pack1_16,
         pack31_16,
         pack32_16};
 
-packfnc unpack32[33]={nullunpacker,unpack1_32,
+packfnc unpack32[33]={nullunpacker32,unpack1_32,
         unpack2_32,
         unpack3_32,
         unpack4_32,
