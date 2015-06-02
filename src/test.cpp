@@ -20,16 +20,27 @@
 
 using namespace std;
 
- class WallClockTimer
-  {
-  public:
-      struct timeval t1, t2;
-  public:
-      WallClockTimer() : t1(), t2(){ gettimeofday(&t1,0); t2 = t1; }
-      void reset() {gettimeofday(&t1,0); t2 = t1;}
-      int elapsed() { return ((t2.tv_sec - t1.tv_sec) * 1000) + ((t2.tv_usec - t1.tv_usec) / 1000); }
-      int split() { gettimeofday(&t2,0); return elapsed(); }
-  };
+class WallClockTimer
+{
+public:
+    struct timeval t1, t2;
+public:
+    WallClockTimer() : t1(), t2() {
+        gettimeofday(&t1,0);
+        t2 = t1;
+    }
+    void reset() {
+        gettimeofday(&t1,0);
+        t2 = t1;
+    }
+    int elapsed() {
+        return ((t2.tv_sec - t1.tv_sec) * 1000) + ((t2.tv_usec - t1.tv_usec) / 1000);
+    }
+    int split() {
+        gettimeofday(&t2,0);
+        return elapsed();
+    }
+};
 
 
 
@@ -60,7 +71,7 @@ vector<uint32_t> loadVector(string filename) {
 void unit() {
     vector<uint32_t> test;
     for(uint32_t i = 0 ; i < 100; ++i)
-            test.push_back(i);
+        test.push_back(i);
     vector<uint32_t> comp(test.size()+1024);
     vector<uint32_t> recover(test.size()+1024);
 
@@ -119,23 +130,23 @@ int main(int argc, char **argv) {
 #ifdef _OPENMP
     cout<<"OpenMP support is available"<<endl;
     int k ;
-#pragma omp parallel
+    #pragma omp parallel
     {
-#pragma omp master
-	{
-	    k = omp_get_num_threads();
-	    cout<< "Number of Threads requested = "<< k<<endl;
+        #pragma omp master
+        {
+            k = omp_get_num_threads();
+            cout<< "Number of Threads requested = "<< k<<endl;
         }
     }
 #else
-   cout<<"No OpenMP support"<<endl;
+    cout<<"No OpenMP support"<<endl;
 #endif
 
 #ifdef _OPENMP
-	k = 0;
-#pragma omp parallel
-#pragma omp atomic
-		k++;
+    k = 0;
+    #pragma omp parallel
+    #pragma omp atomic
+    k++;
     cout<< "Number of Threads counted = "<<k<<endl;
 #endif
 

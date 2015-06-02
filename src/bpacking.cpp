@@ -10,7 +10,7 @@
 
 
 
-    uint32_t * pack1_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack1_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -29,12 +29,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  7 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack2_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack2_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -53,12 +53,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  14 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack3_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack3_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -77,12 +77,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  21 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack4_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack4_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -102,12 +102,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack5_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack5_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -128,12 +128,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  3 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack6_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack6_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -154,12 +154,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  10 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack7_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack7_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -180,12 +180,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  17 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack8_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack8_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -206,12 +206,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack9_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack9_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -234,12 +234,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 9  -  8 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack10_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack10_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -262,12 +262,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  6 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack11_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack11_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -290,12 +290,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  13 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack12_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack12_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -319,12 +319,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack13_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack13_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -349,12 +349,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 13  -  8 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack14_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack14_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -379,12 +379,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  2 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack15_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack15_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -409,12 +409,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  9 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack16_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack16_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -437,12 +437,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack17_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack17_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -469,12 +469,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 17  -  8 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack18_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack18_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -501,12 +501,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 18  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack19_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack19_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -533,12 +533,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  5 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack20_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack20_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -566,12 +566,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack21_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack21_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -600,12 +600,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 21  -  8 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack22_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack22_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -634,12 +634,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 22  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack23_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack23_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -668,12 +668,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  1 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack24_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack24_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -702,12 +702,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack25_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack25_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -738,12 +738,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 25  -  8 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack26_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack26_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -774,12 +774,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 26  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack27_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack27_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -810,12 +810,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 27  -  24 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack28_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack28_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -847,12 +847,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack29_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack29_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -885,12 +885,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 29  -  8 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack30_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack30_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -923,12 +923,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 30  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack31_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack31_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -961,12 +961,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 31  -  24 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack32_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack32_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++out;
@@ -993,13 +993,13 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
 
- uint32_t * unpack1_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack1_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   & 1  ;
     *out += base;
@@ -1026,13 +1026,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack2_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack2_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 2 )  ;
     *out += base;
@@ -1059,13 +1059,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack3_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack3_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 3 )  ;
     *out += base;
@@ -1092,13 +1092,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack4_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack4_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 4 )  ;
     *out += base;
@@ -1126,13 +1126,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack5_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack5_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 5 )  ;
     *out += base;
@@ -1161,13 +1161,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack6_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack6_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 6 )  ;
     *out += base;
@@ -1196,13 +1196,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack7_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack7_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 7 )  ;
     *out += base;
@@ -1231,13 +1231,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack8_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack8_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 8 )  ;
     *out += base;
@@ -1266,13 +1266,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack9_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack9_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 9 )  ;
     *out += base;
@@ -1303,13 +1303,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack10_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack10_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 10 )  ;
     *out += base;
@@ -1340,13 +1340,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack11_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack11_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 11 )  ;
     *out += base;
@@ -1377,13 +1377,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack12_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack12_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 12 )  ;
     *out += base;
@@ -1415,13 +1415,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack13_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack13_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 13 )  ;
     *out += base;
@@ -1454,13 +1454,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack14_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack14_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 14 )  ;
     *out += base;
@@ -1493,13 +1493,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack15_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack15_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 15 )  ;
     *out += base;
@@ -1532,13 +1532,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack16_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack16_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 16 )  ;
     *out += base;
@@ -1569,13 +1569,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack17_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack17_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 17 )  ;
     *out += base;
@@ -1610,13 +1610,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack18_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack18_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 18 )  ;
     *out += base;
@@ -1651,13 +1651,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack19_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack19_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 19 )  ;
     *out += base;
@@ -1692,13 +1692,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack20_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack20_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 20 )  ;
     *out += base;
@@ -1734,13 +1734,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack21_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack21_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 21 )  ;
     *out += base;
@@ -1777,13 +1777,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack22_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack22_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 22 )  ;
     *out += base;
@@ -1820,13 +1820,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack23_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack23_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 23 )  ;
     *out += base;
@@ -1863,13 +1863,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack24_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack24_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 24 )  ;
     *out += base;
@@ -1906,13 +1906,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack25_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack25_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 25 )  ;
     *out += base;
@@ -1951,13 +1951,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack26_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack26_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 26 )  ;
     *out += base;
@@ -1996,13 +1996,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack27_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack27_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 27 )  ;
     *out += base;
@@ -2041,13 +2041,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack28_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack28_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 28 )  ;
     *out += base;
@@ -2087,13 +2087,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack29_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack29_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 29 )  ;
     *out += base;
@@ -2134,13 +2134,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack30_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack30_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 30 )  ;
     *out += base;
@@ -2181,13 +2181,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack31_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack31_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 31 )  ;
     *out += base;
@@ -2228,13 +2228,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack32_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack32_8( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  ) ;
     ++in;
@@ -2269,12 +2269,12 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
-    uint32_t * pack1_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack1_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2309,12 +2309,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  15 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack2_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack2_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2350,12 +2350,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack3_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack3_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2392,12 +2392,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  13 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack4_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack4_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2434,12 +2434,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack5_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack5_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2478,12 +2478,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  11 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack6_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack6_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2523,12 +2523,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack7_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack7_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2569,12 +2569,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  9 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack8_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack8_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2613,12 +2613,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack9_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack9_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2661,12 +2661,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  7 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack10_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack10_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2710,12 +2710,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack11_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack11_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2760,12 +2760,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  5 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack12_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack12_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2810,12 +2810,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack13_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack13_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2862,12 +2862,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  3 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack14_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack14_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2915,12 +2915,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack15_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack15_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -2969,12 +2969,12 @@
     *out |= static_cast<uint32_t>( (*in) - base  ) <<  1 ;
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack16_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack16_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3017,12 +3017,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack17_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack17_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3073,12 +3073,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 17  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack18_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack18_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3130,12 +3130,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack19_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack19_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3188,12 +3188,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 19  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack20_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack20_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3246,12 +3246,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack21_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack21_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3306,12 +3306,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 21  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack22_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack22_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3367,12 +3367,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack23_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack23_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3429,12 +3429,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 23  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack24_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack24_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3489,12 +3489,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack25_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack25_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3553,12 +3553,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 25  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack26_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack26_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3618,12 +3618,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack27_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack27_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3684,12 +3684,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 27  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack28_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack28_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3750,12 +3750,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack29_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack29_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3818,12 +3818,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 29  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack30_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack30_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3887,12 +3887,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack31_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack31_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -3957,12 +3957,12 @@
     *out =  static_cast<uint32_t>( (*in) - base ) >> ( 31  -  16 );
     ++in;
 
-        return out + 1;
-      }
+    return out + 1;
+}
 
 
 
-    uint32_t * pack32_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack32_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++out;
@@ -4013,13 +4013,13 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
 
- uint32_t * unpack1_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack1_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   & 1  ;
     *out += base;
@@ -4070,13 +4070,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack2_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack2_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 2 )  ;
     *out += base;
@@ -4128,13 +4128,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack3_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack3_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 3 )  ;
     *out += base;
@@ -4187,13 +4187,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack4_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack4_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 4 )  ;
     *out += base;
@@ -4246,13 +4246,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack5_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack5_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 5 )  ;
     *out += base;
@@ -4307,13 +4307,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack6_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack6_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 6 )  ;
     *out += base;
@@ -4369,13 +4369,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack7_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack7_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 7 )  ;
     *out += base;
@@ -4432,13 +4432,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack8_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack8_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 8 )  ;
     *out += base;
@@ -4493,13 +4493,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack9_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack9_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 9 )  ;
     *out += base;
@@ -4558,13 +4558,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack10_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack10_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 10 )  ;
     *out += base;
@@ -4624,13 +4624,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack11_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack11_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 11 )  ;
     *out += base;
@@ -4691,13 +4691,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack12_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack12_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 12 )  ;
     *out += base;
@@ -4758,13 +4758,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack13_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack13_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 13 )  ;
     *out += base;
@@ -4827,13 +4827,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack14_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack14_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 14 )  ;
     *out += base;
@@ -4897,13 +4897,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack15_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack15_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 15 )  ;
     *out += base;
@@ -4968,13 +4968,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack16_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack16_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 16 )  ;
     *out += base;
@@ -5033,13 +5033,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack17_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack17_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 17 )  ;
     *out += base;
@@ -5106,13 +5106,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack18_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack18_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 18 )  ;
     *out += base;
@@ -5180,13 +5180,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack19_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack19_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 19 )  ;
     *out += base;
@@ -5255,13 +5255,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack20_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack20_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 20 )  ;
     *out += base;
@@ -5330,13 +5330,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack21_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack21_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 21 )  ;
     *out += base;
@@ -5407,13 +5407,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack22_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack22_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 22 )  ;
     *out += base;
@@ -5485,13 +5485,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack23_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack23_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 23 )  ;
     *out += base;
@@ -5564,13 +5564,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack24_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack24_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 24 )  ;
     *out += base;
@@ -5641,13 +5641,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack25_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack25_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 25 )  ;
     *out += base;
@@ -5722,13 +5722,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack26_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack26_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 26 )  ;
     *out += base;
@@ -5804,13 +5804,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack27_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack27_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 27 )  ;
     *out += base;
@@ -5887,13 +5887,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack28_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack28_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 28 )  ;
     *out += base;
@@ -5970,13 +5970,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack29_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack29_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 29 )  ;
     *out += base;
@@ -6055,13 +6055,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack30_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack30_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 30 )  ;
     *out += base;
@@ -6141,13 +6141,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack31_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack31_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 31 )  ;
     *out += base;
@@ -6228,13 +6228,13 @@
     *out += base;
     out++;
 
-        return in + 1;
-      }
+    return in + 1;
+}
 
 
 
 
- uint32_t * unpack32_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack32_16( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  ) ;
     ++in;
@@ -6301,12 +6301,12 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
-    uint32_t * pack1_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack1_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -6374,12 +6374,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack2_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack2_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -6448,12 +6448,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack3_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack3_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -6525,12 +6525,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack4_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack4_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -6601,12 +6601,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack5_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack5_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -6682,12 +6682,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack6_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack6_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -6764,12 +6764,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack7_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack7_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -6849,12 +6849,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack8_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack8_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -6929,12 +6929,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack9_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack9_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7018,12 +7018,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack10_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack10_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7108,12 +7108,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack11_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack11_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7201,12 +7201,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack12_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack12_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7293,12 +7293,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack13_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack13_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7390,12 +7390,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack14_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack14_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7488,12 +7488,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack15_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack15_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7589,12 +7589,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack16_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack16_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7677,12 +7677,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack17_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack17_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7782,12 +7782,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack18_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack18_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7888,12 +7888,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack19_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack19_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -7997,12 +7997,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack20_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack20_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -8105,12 +8105,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack21_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack21_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -8218,12 +8218,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack22_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack22_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -8332,12 +8332,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack23_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack23_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -8449,12 +8449,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack24_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack24_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -8561,12 +8561,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack25_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack25_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -8682,12 +8682,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack26_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack26_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -8804,12 +8804,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack27_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack27_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -8929,12 +8929,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack28_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack28_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -9053,12 +9053,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack29_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack29_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -9182,12 +9182,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack30_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack30_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -9312,12 +9312,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack31_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack31_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++in;
@@ -9445,12 +9445,12 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
-    uint32_t * pack32_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * pack32_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out =  static_cast<uint32_t>((*in) -base)  ;
     ++out;
@@ -9549,13 +9549,13 @@
     ++out;
     ++in;
 
-        return out;
-      }
+    return out;
+}
 
 
 
 
- uint32_t * unpack1_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack1_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   & 1  ;
     *out += base;
@@ -9655,13 +9655,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack2_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack2_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 2 )  ;
     *out += base;
@@ -9762,13 +9762,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack3_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack3_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 3 )  ;
     *out += base;
@@ -9872,13 +9872,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack4_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack4_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 4 )  ;
     *out += base;
@@ -9981,13 +9981,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack5_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack5_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 5 )  ;
     *out += base;
@@ -10095,13 +10095,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack6_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack6_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 6 )  ;
     *out += base;
@@ -10210,13 +10210,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack7_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack7_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 7 )  ;
     *out += base;
@@ -10328,13 +10328,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack8_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack8_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 8 )  ;
     *out += base;
@@ -10441,13 +10441,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack9_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack9_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 9 )  ;
     *out += base;
@@ -10563,13 +10563,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack10_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack10_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 10 )  ;
     *out += base;
@@ -10686,13 +10686,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack11_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack11_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 11 )  ;
     *out += base;
@@ -10812,13 +10812,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack12_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack12_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 12 )  ;
     *out += base;
@@ -10937,13 +10937,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack13_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack13_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 13 )  ;
     *out += base;
@@ -11067,13 +11067,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack14_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack14_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 14 )  ;
     *out += base;
@@ -11198,13 +11198,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack15_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack15_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 15 )  ;
     *out += base;
@@ -11332,13 +11332,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack16_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack16_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 16 )  ;
     *out += base;
@@ -11453,13 +11453,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack17_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack17_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 17 )  ;
     *out += base;
@@ -11591,13 +11591,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack18_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack18_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 18 )  ;
     *out += base;
@@ -11730,13 +11730,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack19_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack19_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 19 )  ;
     *out += base;
@@ -11872,13 +11872,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack20_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack20_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 20 )  ;
     *out += base;
@@ -12013,13 +12013,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack21_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack21_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 21 )  ;
     *out += base;
@@ -12159,13 +12159,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack22_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack22_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 22 )  ;
     *out += base;
@@ -12306,13 +12306,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack23_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack23_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 23 )  ;
     *out += base;
@@ -12456,13 +12456,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack24_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack24_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 24 )  ;
     *out += base;
@@ -12601,13 +12601,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack25_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack25_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 25 )  ;
     *out += base;
@@ -12755,13 +12755,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack26_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack26_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 26 )  ;
     *out += base;
@@ -12910,13 +12910,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack27_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack27_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 27 )  ;
     *out += base;
@@ -13068,13 +13068,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack28_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack28_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 28 )  ;
     *out += base;
@@ -13225,13 +13225,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack29_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack29_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 29 )  ;
     *out += base;
@@ -13387,13 +13387,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack30_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack30_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 30 )  ;
     *out += base;
@@ -13550,13 +13550,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack31_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack31_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  )   % (1U << 31 )  ;
     *out += base;
@@ -13716,13 +13716,13 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
 
 
- uint32_t * unpack32_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
+uint32_t * unpack32_32( uint32_t base,  uint32_t *   in, uint32_t *    out) {
 
     *out = ( (*in) >>  0  ) ;
     ++in;
@@ -13853,7 +13853,7 @@
     *out += base;
     out++;
 
-        return in;
-      }
+    return in;
+}
 
 
