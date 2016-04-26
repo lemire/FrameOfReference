@@ -1,4 +1,5 @@
 # Frame of Reference (FOR) C++ library
+[![Build Status](https://travis-ci.org/lemire/FrameOfReference.png)](https://travis-ci.org/lemire/FrameOfReference)
 
 ## What is this?
 
