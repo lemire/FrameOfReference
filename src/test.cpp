@@ -14,155 +14,266 @@
 #include <cmath>
 #include <iomanip>
 #include <fstream>
-
 #include "bpacking.h"
 #include "compression.h"
+#include "turbocompression.h"
 
 using namespace std;
 
-class WallClockTimer
-{
+class WallClockTimer {
 public:
-    struct timeval t1, t2;
+  struct timeval t1, t2;
+
 public:
-    WallClockTimer() : t1(), t2() {
-        gettimeofday(&t1,0);
-        t2 = t1;
-    }
-    void reset() {
-        gettimeofday(&t1,0);
-        t2 = t1;
-    }
-    int elapsed() {
-        return ((t2.tv_sec - t1.tv_sec) * 1000) + ((t2.tv_usec - t1.tv_usec) / 1000);
-    }
-    int split() {
-        gettimeofday(&t2,0);
-        return elapsed();
-    }
+  WallClockTimer() : t1(), t2() {
+    gettimeofday(&t1, 0);
+    t2 = t1;
+  }
+  void reset() {
+    gettimeofday(&t1, 0);
+    t2 = t1;
+  }
+  int elapsed() {
+    return ((t2.tv_sec - t1.tv_sec) * 1000) +
+           ((t2.tv_usec - t1.tv_usec) / 1000);
+  }
+  int split() {
+    gettimeofday(&t2, 0);
+    return elapsed();
+  }
 };
 
-
-
-void displayUsage() {
-    cout << "run as test nameoffile" << endl;
-}
+void displayUsage() { cout << "run as test nameoffile" << endl; }
 
 vector<uint32_t> loadVector(string filename) {
-    vector < uint32_t > answer;
-    answer.reserve(1024*32);// expect sizeable arrays
-    ifstream logFile(filename.c_str());
-    if (!logFile.is_open()) {
-        cerr << " Couldn't open query vector file " << filename << endl;
-        displayUsage( );
-        return answer;
-    }
-    cout << "# Parsing vector file " << filename << endl;
-
-    logFile.exceptions(ios::badbit); // will throw an exception if something goes wrong, saves us the trouble of checking the IO status
-    string line;
-    for (; logFile && getline(logFile, line);) {
-        uint32_t id = atoi(line.c_str());
-        answer.push_back(id);
-    }
+  vector<uint32_t> answer;
+  answer.reserve(1024 * 32); // expect sizeable arrays
+  ifstream logFile(filename.c_str());
+  if (!logFile.is_open()) {
+    cerr << " Couldn't open query vector file " << filename << endl;
+    displayUsage();
     return answer;
+  }
+  cout << "# Parsing vector file " << filename << endl;
+
+  logFile.exceptions(ios::badbit); // will throw an exception if something goes
+                                   // wrong, saves us the trouble of checking
+                                   // the IO status
+  string line;
+  for (; logFile && getline(logFile, line);) {
+    uint32_t id = atoi(line.c_str());
+    answer.push_back(id);
+  }
+  return answer;
 }
 
 void unit() {
-    vector<uint32_t> test;
-    for(uint32_t i = 0 ; i < 100; ++i)
-        test.push_back(i);
-    vector<uint32_t> comp(test.size()+1024);
-    vector<uint32_t> recover(test.size()+1024);
+  vector<uint32_t> test;
+  for (uint32_t i = 0; i < 100; ++i)
+    test.push_back(i);
+  vector<uint32_t> comp(test.size() + 1024);
+  vector<uint32_t> recover(test.size() + 1024);
 
-    compress(&test[0],test.size(),&comp[0]);
+  compress(test.data(), test.size(), comp.data());
+  uint32_t nvalue = 0;
+  uncompress(comp.data(), recover.data(), nvalue);
+  recover.resize(nvalue);
+
+  if (recover != test)
+    throw runtime_error("bug");
+}
+
+void deepunit() {
+  for (int k = 0; k < 32; ++k) {
+    vector<uint32_t> test;
+    for (uint32_t i = 0; i < 100; ++i) {
+      test.push_back(0);
+      test.push_back(0xFFFFFFFF >> k);
+    }
+    vector<uint32_t> comp(test.size() + 1024);
+    vector<uint32_t> recover(test.size() + 1024);
+
+    compress(test.data(), test.size(), comp.data());
     uint32_t nvalue = 0;
-    uncompress(&comp[0],&recover[0],nvalue);
+    uncompress(comp.data(), recover.data(), nvalue);
     recover.resize(nvalue);
 
-    if(recover != test) throw runtime_error("bug");
+    if (recover != test)
+      throw runtime_error("bug");
+  }
 }
 
-void benchmark(vector<uint32_t > & data) {
-    vector<uint32_t> buffer(data.size());
+void turbounit() {
+  vector<uint32_t> test;
+  for (uint32_t i = 0; i < 100; ++i)
+    test.push_back(i);
+  vector<uint8_t> comp(4 * test.size() + 1024);
+  vector<uint32_t> recover(test.size() + 1024);
 
-    if(data.size()==0) {
-        cout<<"Empty vector"<<endl;
-        return;
+  turbocompress(test.data(), test.size(), comp.data());
+  uint32_t nvalue = 0;
+  turbouncompress(comp.data(), recover.data(), nvalue);
+
+  recover.resize(nvalue);
+
+  if (recover != test)
+    throw runtime_error("bug");
+}
+
+void turbodeepunit() {
+  for (int k = 31; k >= 0; --k) {
+    vector<uint32_t> test;
+    for (uint32_t i = 0; i < 100; ++i) {
+      test.push_back(0);
+      test.push_back(0xFFFFFFFF >> k);
     }
-    cout<<"vector size = "<<data.size()<<endl;
-    vector<uint32_t> compdata(data.size() + 2048);
-    uint32_t * out = compress(&data[0],data.size(),&compdata[0]);
-    cout<<"compression rate:"<<setprecision(2)<<data.size()*1.0/(out-&compdata[0])<<endl;
-    cout<<"bits/int:" <<setprecision(4)<<(out-&compdata[0])*32.0/data.size()<<endl;
-    cout<<"volume: " <<setprecision(2)<<(out-&compdata[0])*4.0/1024<<"KB"<<endl;
+    vector<uint8_t> comp(test.size() * 4 + 1024);
+    vector<uint32_t> recover(test.size() + 1024);
 
+    turbocompress(test.data(), test.size(), comp.data());
     uint32_t nvalue = 0;
-    uncompress(&compdata[0],&buffer[0],nvalue);
-    buffer.resize(nvalue);
-    if(buffer != data) throw runtime_error("bug");
-
-    double numberofintegers = 0;
-    int N =  (1<<28)/data.size();
-    uint32_t bogus = 0;
-    WallClockTimer timer;
-    for(int k = 0; k < N; ++k) {
-        uncompress(&compdata[0],&buffer[0],nvalue);
-        numberofintegers += nvalue;
-        bogus += buffer.back() + buffer.front();
+    turbouncompress(comp.data(), recover.data(), nvalue);
+    recover.resize(nvalue);
+    if (recover != test) {
+      throw runtime_error("bug");
     }
-    uint64_t timems = timer.split();
-    cout<<"decoding time per int: "<< setprecision(2)<<timems/numberofintegers*1000*1000<<"ns"<<endl;
-    cout<<"decoding time per array: "<< setprecision(2)<<static_cast<double>(timems)/N*1000<<"ms"<<endl;
-    vector<uint32_t> newbuffer(data.size());
-    cout<<"# ignore me "<<bogus<<endl;
-    cout<<endl;
+  }
 }
 
+void benchmark(vector<uint32_t> &data) {
+  std::cout << "[standard benchmark]" << std::endl;
+  vector<uint32_t> buffer(data.size());
+
+  if (data.size() == 0) {
+    cout << "Empty vector" << endl;
+    return;
+  }
+  cout << "vector size = " << data.size() << endl;
+  cout << "vector size = " << data.size() * sizeof(uint32_t) / 1024.0 << "KB"
+       << endl;
+
+  vector<uint32_t> compdata(data.size() + 2048);
+  uint32_t *out = compress(data.data(), data.size(), compdata.data());
+  cout << "compression rate:" << setprecision(2)
+       << data.size() * 1.0 / (out - compdata.data()) << endl;
+  cout << "bits/int:" << setprecision(4)
+       << (out - compdata.data()) * 32.0 / data.size() << endl;
+  cout << "volume: " << setprecision(2) << (out - compdata.data()) * 4.0 / 1024
+       << "KB" << endl;
+
+  uint32_t nvalue = 0;
+  uncompress(compdata.data(), buffer.data(), nvalue);
+  buffer.resize(nvalue);
+  if (buffer != data)
+    throw runtime_error("bug");
+
+  double numberofintegers = 0;
+  int N = (1 << 28) / data.size();
+  uint32_t bogus = 0;
+  WallClockTimer timer;
+  for (int k = 0; k < N; ++k) {
+    uncompress(compdata.data(), buffer.data(), nvalue);
+    numberofintegers += nvalue;
+    bogus += buffer.back() + buffer.front();
+  }
+  uint64_t timems = timer.split();
+  cout << "decoding time per int: " << setprecision(2)
+       << timems / numberofintegers * 1000 * 1000 << "ns" << endl;
+  cout << "decoding time per array: " << setprecision(2)
+       << static_cast<double>(timems) / N * 1000 << "ms" << endl;
+  vector<uint32_t> newbuffer(data.size());
+  cout << "# ignore me " << bogus << endl;
+  cout << endl;
+}
+
+void turbobenchmark(vector<uint32_t> &data) {
+  std::cout << "[turbo benchmark]" << std::endl;
+  vector<uint32_t> buffer(data.size());
+
+  if (data.size() == 0) {
+    cout << "Empty vector" << endl;
+    return;
+  }
+  cout << "vector size = " << data.size() << endl;
+  cout << "vector size = " << data.size() * sizeof(uint32_t) / 1024.0 << "KB"
+       << endl;
+
+  vector<uint8_t> compdata(data.size() * sizeof(uint32_t) + 2048);
+  const uint8_t *out = turbocompress(data.data(), data.size(), compdata.data());
+  cout << "compression rate:" << setprecision(2)
+       << data.size() * 1.0 * sizeof(uint32_t) / (out - compdata.data())
+       << endl;
+  cout << "bits/int:" << setprecision(4)
+       << (out - compdata.data()) * 8.0 / data.size() << endl;
+  cout << "volume: " << setprecision(2) << (out - compdata.data()) * 1.0 / 1024
+       << "KB" << endl;
+
+  uint32_t nvalue = 0;
+  turbouncompress(compdata.data(), buffer.data(), nvalue);
+  buffer.resize(nvalue);
+  if (buffer != data)
+    throw runtime_error("bug");
+
+  double numberofintegers = 0;
+  int N = (1 << 28) / data.size();
+  uint32_t bogus = 0;
+  WallClockTimer timer;
+  for (int k = 0; k < N; ++k) {
+    turbouncompress(compdata.data(), buffer.data(), nvalue);
+    numberofintegers += nvalue;
+    bogus += buffer.back() + buffer.front();
+  }
+  uint64_t timems = timer.split();
+  cout << "decoding time per int: " << setprecision(2)
+       << timems / numberofintegers * 1000 * 1000 << "ns" << endl;
+  cout << "decoding time per array: " << setprecision(2)
+       << static_cast<double>(timems) / N * 1000 << "ms" << endl;
+  vector<uint32_t> newbuffer(data.size());
+  cout << "# ignore me " << bogus << endl;
+  cout << endl;
+}
 
 int main(int argc, char **argv) {
-    unit();
-    if (argc <= 1) {
-        displayUsage();
-        return -1;
-    }
-    string filename = argv[1];
+  unit();
+  deepunit();
+
+  turbounit();
+  turbodeepunit();
+
+  if (argc <= 1) {
+    displayUsage();
+    return -1;
+  }
+  string filename = argv[1];
 #ifdef _OPENMP
-    cout<<"OpenMP support is available"<<endl;
-    int k ;
-    #pragma omp parallel
+  cout << "OpenMP support is available" << endl;
+  int k;
+#pragma omp parallel
+  {
+#pragma omp master
     {
-        #pragma omp master
-        {
-            k = omp_get_num_threads();
-            cout<< "Number of Threads requested = "<< k<<endl;
-        }
+      k = omp_get_num_threads();
+      cout << "Number of Threads requested = " << k << endl;
     }
+  }
 #else
-    cout<<"No OpenMP support"<<endl;
+  cout << "No OpenMP support" << endl;
 #endif
 
 #ifdef _OPENMP
-    k = 0;
-    #pragma omp parallel
-    #pragma omp atomic
-    k++;
-    cout<< "Number of Threads counted = "<<k<<endl;
+  k = 0;
+#pragma omp parallel
+#pragma omp atomic
+  k++;
+  cout << "Number of Threads counted = " << k << endl;
 #endif
 
-    cout<<"####### processing "<<filename<<endl;
-    vector<uint32_t> data = loadVector(filename);
-    benchmark(data);
+  cout << "####### processing " << filename << endl;
+  vector<uint32_t> data = loadVector(filename);
+  cout << endl;
 
-    size_t bigsize = 128*1024*1024/data.size() * data.size();
-    cout<<"Creating big array...";
-    cout.flush();
-    vector<uint32_t> bigdata(bigsize);
-    for(size_t t = 0; t < bigsize/data.size(); ++t)
-        for(uint32_t i = 0; i < data.size(); ++i)
-            bigdata[t*data.size() + i ]  = data[i];
-    cout<<"ok"<<endl;
-    benchmark(bigdata);
-    return 0;
+  benchmark(data);
+  turbobenchmark(data);
+
+  return 0;
 }
-

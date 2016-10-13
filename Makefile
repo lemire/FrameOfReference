@@ -25,8 +25,8 @@ endif #intel
 HEADERS= $(shell ls include/*h)
 
 all: test
-	echo "type ./test sampledata.txt" 
-	echo "if you have OpenMP support, type make testmp" 
+	@echo "type ./test sampledata.txt" 
+	@echo "if you have OpenMP support, type make testmp" 
 
 bpacking.o: include/bpacking.h src/bpacking.cpp
 	$(CXX) $(CXXFLAGS) -c src/bpacking.cpp -Iinclude
