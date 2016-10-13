@@ -19,7 +19,11 @@ print("""
 #include <iso646.h> // mostly for Microsoft compilers
 #include <stdint.h> // part of Visual Studio 2010 and better
 """)
-
+print("""
+#ifndef UINT64_C
+#define UINT64_C(c) (c ## ULL)
+#endif
+""")
 print("""
 /** turbopacking32 starts here **/
 /**

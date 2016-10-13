@@ -3,6 +3,9 @@
 #define INCLUDE_TURBOPACKING32_H
 #include <iso646.h> // mostly for Microsoft compilers
 #include <stdint.h> // part of Visual Studio 2010 and better
+#ifndef UINT64_C
+#define UINT64_C(c) (c ## ULL)
+#endif
 
 /** turbopacking32 starts here **/
 /**
