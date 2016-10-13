@@ -273,7 +273,7 @@ void turbobenchmark64(vector<uint32_t> &data32) {
   std::cout << "[turbo benchmark64]" << std::endl;
   vector<uint64_t> data;
 
-  for (auto i = data32.begin(); i != data32.end(); ++i)
+  for (vector<uint32_t>::const_iterator i = data32.begin(); i != data32.end(); ++i)
     data.push_back(*i);
 
   vector<uint64_t> buffer(data);
