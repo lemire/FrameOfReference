@@ -7,6 +7,28 @@ C++ library to pack and unpack vectors of integers having a small
 range of values using a technique called Frame of Reference (Goldstein et al. 1998). 
 It should run fast even though it is written in simple C++.
 
+## Code usage :
+
+Given an array of 32-bit integers, you can compress it as follows:
+
+```C
+#include "compression.h"
+
+...
+
+uint32_t * inputdata = ... // length values
+uint32_t * compresseddata = ... // enough data
+uint32_t *out = compress(inputdata, length, compresseddata);
+// compressed data lies between compresseddata and out
+uint32_t nvalue = 0;
+uint32_t * recoverydata = ... // available buffer with at least length elements
+uncompress(compresseddata, recoverydata, nvalue);
+// nvalue will be equal to length
+```
+
+There is a similar API with ``turbocompress`` and ``turbouncompress`` with the difference
+that ``compresseddata`` uses an ``uint8_t`` pointer type.
+
 ##  Usage:
 
 To run a simple benchmark, do 
