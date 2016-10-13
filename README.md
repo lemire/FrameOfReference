@@ -82,6 +82,13 @@ This requires OpenMP support however.
 This was tested with GNU G++ and clang++ After suitable adjustments, it should
 build under most C++ compilers.
 
+## Other relevant libraries
+
+* Fast decoder for VByte-compressed integers https://github.com/lemire/MaskedVByte
+* Fast integer compression in C using StreamVByte https://github.com/lemire/streamvbyte
+* FastPFOR is a C++ research library well suited to compress unsorted arrays: https://github.com/lemire/FastPFor
+* SIMDCompressionAndIntersection is a C++ research library well suited for sorted arrays (differential coding)
+and computing intersections: https://github.com/lemire/SIMDCompressionAndIntersection
 
 ## References
 
