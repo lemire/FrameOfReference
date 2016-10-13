@@ -7,6 +7,10 @@
 #define UINT64_C(c) (c ## ULL)
 #endif
 
+/**
+* (c) Daniel Lemire
+* Apache License 2.0
+*/
 /** turbopacking32 starts here **/
 /**
 * this code mimics the way TurboPFor packs short arrays of integers.

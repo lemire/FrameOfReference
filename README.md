@@ -29,6 +29,38 @@ uncompress(compresseddata, recoverydata, nvalue);
 There is a similar API with ``turbocompress`` and ``turbouncompress`` with the difference
 that ``compresseddata`` uses an ``uint8_t`` pointer type.
 
+```C
+#include "turbocompression.h"
+
+...
+
+uint32_t * inputdata = ... // length values
+uint8_t * compresseddata = ... // enough data
+uint8_t *out = turbocompress(inputdata, length, compresseddata);
+// compressed data lies between compresseddata and out
+uint32_t nvalue = 0;
+uint32_t * recoverydata = ... // available buffer with at least length elements
+turbouncompress(compresseddata, recoverydata, nvalue);
+// nvalue will be equal to length
+```
+
+We can also compress 64-bit arrays:
+
+```C
+#include "turbocompression.h"
+
+...
+
+uint64_t * inputdata = ... // length values
+uint8_t * compresseddata = ... // enough data
+uint8_t *out = turbocompress64(inputdata, length, compresseddata);
+// compressed data lies between compresseddata and out
+uint32_t nvalue = 0;
+uint64_t * recoverydata = ... // available buffer with at least length elements
+turbouncompress64(compresseddata, recoverydata, nvalue);
+// nvalue will be equal to length
+```
+
 ##  Usage:
 
 To run a simple benchmark, do 
