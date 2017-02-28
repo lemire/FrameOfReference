@@ -78,7 +78,7 @@ For a parallelized version, type
 This requires OpenMP support however.
 
 
-##  Usage (with CMake under macOS and Linux)
+##  Building (with CMake under macOS and Linux)
 
 You need to have ``cmake`` installed and available as a command.
 
@@ -87,6 +87,26 @@ You need to have ``cmake`` installed and available as a command.
      cmake ..
      make
      make test
+
+# Building (Visual Studio under Windows)
+
+We are assuming that you have a common Windows PC with at least Visual Studio 2015, and an x64 processor.
+
+To build with at least Visual Studio 2015 from the command line:
+- Grab the FrameOfReference code from GitHub, e.g., by cloning it using [GitHub Desktop](https://desktop.github.com/).
+- Install [CMake](https://cmake.org/download/). When you install it, make sure to ask that ``cmake`` be made available from the command line.
+- Create a subdirectory within FrameOfReference, such as ``VisualStudio``.
+- Using a shell, go to this newly created directory. For example, within GitHub Desktop, you can right-click on  ``FrameOfReference`` in your GitHub repository list, and select ``Open in Git Shell``, then type ``cd VisualStudio`` in the newly created shell.
+- Type ``cmake -DCMAKE_GENERATOR_PLATFORM=x64 ..`` in the shell while in the ``VisualStudio`` repository.
+- This last command created a Visual Studio solution file in the newly created directory (e.g., ``FrameOfReference.sln``). Open this file in Visual Studio. You should now be able to build the project and run the tests. For example, in the ``Solution Explorer`` window (available from the ``View`` menu), right-click ``ALL_BUILD`` and select ``Build``. To test the code, still in the ``Solution Explorer`` window, select ``RUN_TESTS`` and select ``Build``.
+
+To build with at least Visual Studio 2017 directly in the IDE:
+- Grab the FrameOfReference code from GitHub, e.g., by cloning it using [GitHub Desktop](https://desktop.github.com/).
+- Select the ``Visual C++ tools for CMake`` optional component when installing the C++ Development Workload within Visual Studio.
+- Within Visual Studio use ``File > Open > Folder...`` to open the FrameOfReference folder.
+- Right click on CMakeLists.txt in the parent directory within ``Solution Explorer`` and select ``Build`` to build the project.
+- For testing, in the Standard toolbar, drop the ``Select Startup Item...`` menu and choose one of the tests. Run the test by pressing the button to the left of the dropdown.
+
 
 ## Requirements:
 
