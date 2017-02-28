@@ -6,16 +6,16 @@ ifeq ($(INTEL), 1)
 # if you wish to use the Intel compiler, please do "make INTEL=1".
     YOURCXX ?= /opt/intel/bin/icpc
 ifeq ($(DEBUG),1)
-    CXXFLAGS =  -O3 -Wall -ansi  -DDEBUG=1 -D_GLIBCXX_DEBUG   -ggdb
+    CXXFLAGS =  -std=c++11 -O3 -Wall -ansi  -DDEBUG=1 -D_GLIBCXX_DEBUG   -ggdb
 else
-    CXXFLAGS =  -O3 -Wall -ansi  -DNDEBUG=1  -ggdb
+    CXXFLAGS =  -std=c++11 -O3 -Wall -ansi  -DNDEBUG=1  -ggdb
 endif # debug
 else #intel
     YOURCXX ?= g++
 ifeq ($(DEBUG),1)
-    CXXFLAGS =   -Weffc++ -pedantic -ggdb -DDEBUG=1 -D_GLIBCXX_DEBUG -Wall -Wextra  -Wcast-align  
+    CXXFLAGS =   -std=c++11 -Weffc++ -pedantic -ggdb -DDEBUG=1 -D_GLIBCXX_DEBUG -Wall -Wextra  -Wcast-align  
 else
-    CXXFLAGS =  -Weffc++ -pedantic -O3 -Wall -Wextra  -Wcast-align  
+    CXXFLAGS =  -std=c++11 -Weffc++ -pedantic -O3 -Wall -Wextra  -Wcast-align  
 endif #debug
 endif #intel
 
