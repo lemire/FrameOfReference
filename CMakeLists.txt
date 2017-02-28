@@ -10,7 +10,10 @@ project(FrameOfReference CXX C)
 set(PROJECT_URL "https://github.com/lemire/FrameOfReference")
 set(PROJECT_DESCRIPTION "C++ library to pack and unpack vectors of integers having a small range of values using a technique called Frame of Reference")
 
-set(CMAKE_CXX_STANDARD 11)
+### Next line would be ideal, but it does not work on all platforms:
+###set(CMAKE_CXX_STANDARD 11)
+####
+set(CMAKE_CXX_FLAGS                "-Wall -std=c++11")
 
 
 # library target
