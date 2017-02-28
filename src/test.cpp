@@ -90,7 +90,8 @@ public:
 };
 
 #ifndef _WIN32
-
+#include <sys/time.h>
+#include <sys/resource.h>
 class CPUTimer {
 public:
 	// clock_t t1, t2;
