@@ -4,7 +4,7 @@
 ## What is this?
 
 C++ library to pack and unpack vectors of integers having a small
-range of values using a technique called Frame of Reference (Goldstein et al. 1998). 
+range of values using a technique called Frame of Reference (Goldstein et al. 1998).
 It should run fast even though it is written in simple C++.
 
 ## Code usage :
@@ -61,10 +61,10 @@ turbouncompress64(compresseddata, recoverydata, nvalue);
 // nvalue will be equal to length
 ```
 
-##  Usage:
+##  Usage (with Makefile)
 
-To run a simple benchmark, do 
-     
+To run a simple benchmark, do
+
      make
      ./test sampledata.txt
 
@@ -76,6 +76,17 @@ For a parallelized version, type
      ./testmp sampledata.txt
 
 This requires OpenMP support however.
+
+
+##  Usage (with CMake under macOS and Linux)
+
+You need to have ``cmake`` installed and available as a command.
+
+     make release
+     cd release
+     cmake ..
+     make
+     make test
 
 ## Requirements:
 
