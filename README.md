@@ -7,6 +7,9 @@ C++ library to pack and unpack vectors of integers having a small
 range of values using a technique called Frame of Reference (Goldstein et al. 1998).
 It should run fast even though it is written in simple C++.
 
+Code from this library is part [Apache Arrow](https://github.com/apache/arrow)
+and Apache Impala.
+
 ## Code usage :
 
 Given an array of 32-bit integers, you can compress it as follows:
