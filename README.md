@@ -8,7 +8,7 @@ range of values using a technique called Frame of Reference (Goldstein et al. 19
 It should run fast even though it is written in simple C++.
 
 Code from this library is part [Apache Arrow](https://github.com/apache/arrow)
-and Apache Impala.
+and [Apache Impala](https://github.com/cloudera/Impala).
 
 ## Code usage :
 
