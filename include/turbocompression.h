@@ -158,7 +158,7 @@ inline const uint8_t *turbouncompress64(const uint8_t *in, uint64_t *out,
   in += sizeof(m);
   memcpy(&M, in, sizeof(M));
   in += sizeof(M);
-  int b = bits(static_cast<uint64_t>(M - m));
+  int b = bits64(static_cast<uint64_t>(M - m));
 #ifdef _OPENMP
 #pragma omp parallel for
 #endif
