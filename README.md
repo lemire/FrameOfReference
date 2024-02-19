@@ -84,7 +84,7 @@ This requires OpenMP support however.
 
 You need to have ``cmake`` installed and available as a command.
 
-     make release
+     mkdir release
      cd release
      cmake ..
      make
